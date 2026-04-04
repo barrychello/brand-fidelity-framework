@@ -1,4 +1,4 @@
-import project1 from "@/assets/project-1.jpg";
+import taiekea from "@/assets/taiekea.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
@@ -14,7 +14,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  { title: "FILE NOT FOUND", category: "Commercial", image: project1, tall: true },
+  { title: "FILE NOT FOUND", category: "Commercial", image: taiekea, tall: true },
   { title: "SCORED BACK", category: "Film", image: project2 },
   { title: "CALLAWAY", category: "Brand Film", image: project3 },
   { title: "TRIMMING JINGLE", category: "Music Video", image: project4 },
