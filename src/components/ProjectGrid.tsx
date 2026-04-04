@@ -39,7 +39,11 @@ const ProjectGrid = () => {
         {projects.map((project, index) => (
           <div key={index} className="bg-background p-6 md:p-8">
             <div 
-              className="group cursor-pointer" 
+              className={`group cursor-pointer transition-all duration-300 ease-out origin-center ${
+                hoverVideoIndex === index 
+                  ? 'z-50 relative scale-[1.05] md:scale-110 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-background rounded-xl ring-1 ring-border p-2 -m-2' 
+                  : 'relative z-10'
+              }`}
               onMouseEnter={() => project.video ? setHoverVideoIndex(index) : null}
               onMouseLeave={() => setHoverVideoIndex(null)}
             >
