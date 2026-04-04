@@ -14,20 +14,28 @@ interface Project {
   video?: string;
 }
 
+const getYoutubeThumbnail = (url?: string) => {
+  if (!url) return '';
+  const match = url.match(/\/embed\/([^?&]+)/);
+  if (match && match[1]) {
+    // maxresdefault might not always exist, but visually it's the highest res. 
+    // hqdefault is safer, let's use hqdefault.jpg
+    return `https://img.youtube.com/vi/${match[1]}/hqdefault.jpg`;
+  }
+  return '';
+};
+
+const defaultVideoUrl = "https://www.youtube.com/embed/wK0ZcqSD2uU?si=l7xaXKr2uhdaCVlK&autoplay=1";
+
 const projects: Project[] = [
-  { 
-    title: "FILE NOT FOUND", 
-    category: "Commercial", 
-    image: taiekea, 
-    video: "https://www.youtube.com/embed/wK0ZcqSD2uU?si=l7xaXKr2uhdaCVlK&autoplay=1" 
-  },
-  { title: "SCORED BACK", category: "Film", image: project2 },
-  { title: "CALLAWAY", category: "Brand Film", image: project3 },
-  { title: "TRIMMING JINGLE", category: "Music Video", image: project4 },
-  { title: "LUCID HOOD", category: "Commercial", image: project6 },
-  { title: "PROJECT 5", category: "Digital", image: project5 },
-  { title: "PROJECT 7", category: "Technology", image: project7 },
-  { title: "PROJECT 8", category: "Archive", image: project2 },
+  { title: "FILE NOT FOUND", category: "Commercial", image: taiekea, video: defaultVideoUrl },
+  { title: "SCORED BACK", category: "Film", image: project2, video: defaultVideoUrl },
+  { title: "CALLAWAY", category: "Brand Film", image: project3, video: defaultVideoUrl },
+  { title: "TRIMMING JINGLE", category: "Music Video", image: project4, video: defaultVideoUrl },
+  { title: "LUCID HOOD", category: "Commercial", image: project6, video: defaultVideoUrl },
+  { title: "PROJECT 5", category: "Digital", image: project5, video: defaultVideoUrl },
+  { title: "PROJECT 7", category: "Technology", image: project7, video: defaultVideoUrl },
+  { title: "PROJECT 8", category: "Archive", image: project2, video: defaultVideoUrl },
 ];
 
 const ProjectGrid = () => {
@@ -58,13 +66,13 @@ const ProjectGrid = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen
-                    className="absolute top-0 left-0 w-full h-full pointer-events-none"
+                    className="absolute top-0 left-0 w-full h-full pointer-events-none rounded-lg overflow-hidden"
                   ></iframe>
                 </div>
               ) : (
-                <div className="overflow-hidden mb-4 relative">
+                <div className="overflow-hidden mb-4 relative rounded-lg">
                   <img
-                    src={project.image}
+                    src={project.video ? getYoutubeThumbnail(project.video) : project.image}
                     alt={project.title}
                     loading="lazy"
                     className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
