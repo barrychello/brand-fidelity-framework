@@ -5,7 +5,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center px-6 pt-24 pb-16 md:px-10 overflow-hidden">
       <div className="relative z-10 max-w-5xl">
         <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold uppercase leading-[0.9] tracking-tight text-foreground">
-          bintang imut
+          bintang keren
         </h1>
       </div>
 
