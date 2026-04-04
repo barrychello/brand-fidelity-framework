@@ -31,26 +31,30 @@ const projects: Project[] = [
 ];
 
 const ProjectGrid = () => {
-  const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
+  const [hoverVideoIndex, setHoverVideoIndex] = useState<number | null>(null);
 
   return (
     <section id="work" className="px-6 py-20 md:px-10 border-t border-border">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
         {projects.map((project, index) => (
           <div key={index} className="bg-background p-6 md:p-8">
-            <div className="group cursor-pointer" onClick={() => project.video ? setActiveVideoIndex(index) : null}>
-              {activeVideoIndex === index && project.video ? (
+            <div 
+              className="group cursor-pointer" 
+              onMouseEnter={() => project.video ? setHoverVideoIndex(index) : null}
+              onMouseLeave={() => setHoverVideoIndex(null)}
+            >
+              {hoverVideoIndex === index && project.video ? (
                 <div className="mb-4 relative aspect-video w-full">
                   <iframe 
                     width="100%" 
                     height="100%" 
-                    src={project.video} 
+                    src={`${project.video}&mute=1&controls=0`} 
                     title={project.title} 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     allowFullScreen
-                    className="absolute top-0 left-0 w-full h-full"
+                    className="absolute top-0 left-0 w-full h-full pointer-events-none"
                   ></iframe>
                 </div>
               ) : (
