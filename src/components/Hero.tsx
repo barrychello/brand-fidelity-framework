@@ -1,5 +1,5 @@
 import heroFluid from "@/assets/hero-fluid.png";
-import taiekea from "@/assets/taiekea.jpg";
+
 
 const Hero = () => {
   return (
@@ -19,13 +19,7 @@ const Hero = () => {
           className="text-[12vw] md:text-[10vw] xl:text-[10rem] font-bold uppercase leading-tight tracking-wide"
           style={{ fontFamily: "'Boldonse', sans-serif" }}
         >
-          CREATING
-          <img 
-            src={taiekea} 
-            alt="Creative Direction" 
-            className="w-[16vw] md:w-[14vw] lg:w-[18vw] xl:w-[260px] h-[0.65em] object-cover inline-block align-baseline mx-[1vw] md:mx-3 -translate-y-[0.08em] grayscale hover:grayscale-0 transition-all duration-700 ease-out rounded-sm" 
-          />
-          TOMORROWS<br />
+          CREATING TOMORROWS<br />
           FROM TODAY'S<br />
           WORKING GLOBALLY.
         </h1>
