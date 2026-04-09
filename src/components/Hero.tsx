@@ -16,7 +16,7 @@ const Hero = () => {
       {/* Main Minimalist Typography */}
       <div className="flex-grow flex flex-col justify-center w-full mt-16 md:mt-0 z-10 relative">
         <h1 
-          className="text-[12vw] md:text-[10vw] xl:text-[10rem] font-bold uppercase leading-tight tracking-wide"
+          className="text-[6vw] md:text-[5vw] xl:text-[5rem] font-bold uppercase leading-tight tracking-wide"
           style={{ fontFamily: "'Boldonse', sans-serif" }}
         >
           CREATING TOMORROWS<br />
