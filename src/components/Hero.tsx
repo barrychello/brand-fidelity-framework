@@ -9,8 +9,8 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-background/40 z-0 pointer-events-none"></div>
       <div className="relative z-10 max-w-5xl">
-        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold uppercase leading-[0.9] tracking-tight text-foreground" style={{ fontFamily: "'Boldonse', sans-serif" }}>
-          creating tommorows from today’s
+        <h1 className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold uppercase leading-[0.9] tracking-tight text-foreground max-w-4xl" style={{ fontFamily: "'Boldonse', sans-serif" }}>
+          creating tomorrows <br className="hidden md:block" /> from today’s
         </h1>
       </div>
 
