@@ -16,20 +16,18 @@ const Hero = () => {
       {/* Main Minimalist Typography */}
       <div className="flex-grow flex flex-col justify-center w-full mt-16 md:mt-0 z-10 relative">
         <h1 
-          className="text-[14vw] md:text-[11vw] xl:text-[11rem] font-bold uppercase leading-[0.85] tracking-tight"
+          className="text-[12vw] md:text-[10vw] xl:text-[10rem] font-bold uppercase leading-[0.85] tracking-tight"
           style={{ fontFamily: "'Boldonse', sans-serif" }}
         >
-          <div className="whitespace-nowrap">
-            CREATING
-            <img 
-              src={taiekea} 
-              alt="Creative Direction" 
-              className="w-[20vw] md:w-[18vw] lg:w-[24vw] xl:w-[320px] h-[0.7em] object-cover inline-block align-baseline mx-[1vw] md:mx-4 -translate-y-[0.05em] grayscale hover:grayscale-0 transition-all duration-700 ease-out" 
-            />
-            TOMORROWS
-          </div>
-          <div className="block mt-1 md:mt-2">FROM TODAY'S</div>
-          <div className="block md:mt-2">WORKING GLOBALLY.</div>
+          CREATING
+          <img 
+            src={taiekea} 
+            alt="Creative Direction" 
+            className="w-[16vw] md:w-[14vw] lg:w-[18vw] xl:w-[260px] h-[0.65em] object-cover inline-block align-baseline mx-[1vw] md:mx-3 -translate-y-[0.08em] grayscale hover:grayscale-0 transition-all duration-700 ease-out rounded-sm" 
+          />
+          TOMORROWS<br />
+          FROM TODAY'S<br />
+          WORKING GLOBALLY.
         </h1>
       </div>
 
